@@ -1,0 +1,82 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url(arcane-background.jpg);
+}
+
+.color-change {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: #2296bc;
+  color: #1b3220;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+.color-change:hover {
+  animation-name: colorSwitch;
+  animation-duration: 2s;
+  background-color: #2296bc;
+  transition-delay: 5s;
+}
+
+@keyframes colorSwitch {
+  0% {
+    background-color: #1b3220;
+    transform: scale(1.6);
+  }
+
+  50% {
+    background-color: #9b597c;
+    transform: scale(1.8);
+  }
+
+  100% {
+    background-color: #75a57d;
+    transform: scale(1.9);
+    opacity: 1;
+  }
+}
+
+.HERO-section {
+  display: flex;
+  align-items: center;
+}
+
+.peak {
+  animation: scaleStart 2s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes scaleStart {
+  0% {
+    transform: scale(50%);
+  }
+}
+
+h1 {
+  padding: 10px;
+  color: #c3874a;
+  border-radius: 10px;
+  font-family: sans-serif;
+  border: 5px solid #1b3220;
+  background-color: #2296bc;
+  animation-name: rotate-start;
+  animation: rotateStart 2s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes rotateStart {
+  0% {
+    transform: rotate(360deg);
+  }
+}
